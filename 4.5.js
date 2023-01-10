@@ -3,7 +3,7 @@ const leapYear = (year) => {
     console.log(`The year: ${year} is indeed a leap year`);
   } else {
     console.log(`The year: ${year} is not indeed a leap year`);
-  }
+  } console.log('year');
 };
 
 //test
@@ -11,5 +11,6 @@ leapYear(2004);
 leapYear(1900);
 leapYear(2000);
 leapYear(2022);
+
 
 
