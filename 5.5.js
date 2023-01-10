@@ -22,7 +22,7 @@ const checkColor = (color) => {
   }
 };
 
-//test
+//test 
 checkColor('blue');
 checkColor('Blue');
 checkColor('pink');
