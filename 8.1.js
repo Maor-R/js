@@ -13,10 +13,10 @@ const getInfoBook = (book) => {
 
 
 const book = {
-    name:"A Biography of the World's Most Famous Equation",
-    author:"David Bodanis",
-    subject:"Science",
-    year:"2000"
+    name:"Rambam mishne-torah",
+    author:"Moshe Ben Maimon",
+    subject:"Bible -rules",
+    year:"1175"
 }
 
 const res = getInfoBook(book);
