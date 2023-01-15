@@ -7,7 +7,6 @@ const isEqual = (arr1, arr2) => {
   let res = {};
 
   for (let i = 0; i < arr1.length; i++) {
-
     let isEqual = false;
     for (let j = 0; j < arr2.length && !isEqual; j++) {
       if (arr1[i] == arr2[j]) {
@@ -17,16 +16,15 @@ const isEqual = (arr1, arr2) => {
     }
   }
 
-  if(res.length == arr1.length == arr2.length){
+  // console.log(res);
+
+  if (Object.keys(res).length == arr1.length && arr1.length == arr2.length) {
     return true;
-  }
-  else{
+  } else {
     return false;
   }
-
 };
 
 const food = ["Noodle", "Pasta", "Ice-cream", "Meat", "Cucumber", "Olives"];
 const food1 = ["Fries", "Ice-cream", "Pizza", "Olives", "Hamburgers"];
-
 console.log(isEqual(food, food1));
