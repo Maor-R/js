@@ -1,4 +1,3 @@
-
 // Create a function that takes one argument, an array.
 // Use this array:
 // const array = ["Hello", "Good Day", "Your
@@ -13,41 +12,30 @@
 // Extra:
 // return the letter with the most occurrences as well
 
-
-sumLettersInArr =(arr)=>
-{
-    let str = "";
-    for (let a of array)
-    {
-        str += [...a] + ",";
+sumLettersInArr = (arr) => {
+  let str = "";
+  for (let a of array) {
+    str += [...a] + ",";
+  }
+  str = str.toLowerCase().replace(" ", "");
+  str = str.split(",");
+  console.log(str);
+  let sum = {};
+  for (let i = 0; i < str.length; i++) {
+    if (sum[str[i]] == undefined) {
+      sum[str[i]] = 0;
+    } else {
+      continue;
     }
-    str = str.toLowerCase();
-    str = str.split(',')
-    console.log(str)
-    let sum = {};
-    for(let i = 0; i<str.length; i++)
-    {
-        if ( sum [ str[i]] == undefined)
-        {
-            sum [ str[i]] = 0;
-
-        }
-        else{
-            continue;
-        }
-        for(let j=0 ; j<str.length ;j++)
-        {
-            if(str[i] == str[j])
-            {
-                sum [ str[i]] ++;
-
-            }
-        }
+    for (let j = 0; j < str.length; j++) {
+      if (str[i] == str[j]) {
+        sum[str[i]]++;
+      }
     }
-return sum;
+  }
+  return sum;
 };
 const array = ["Hello", "Good Day", "YourWelcome", "hotdog", "hamburgers"];
-
 
 //test
 sum = sumLettersInArr(array);
