@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./19.3.js" defer></script>
+</head>
+
+<style>
+    body {
+        background-color: rgb(210, 205, 205);
+        text-align-last: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+
+    .container {
+        border: solid 1px;
+        background-color: azure;
+        width: 20rem;
+        height: 10rem;
+
+
+    }
+
+    .container-verify {
+        display: grid;
+        column-gap: 0.3rem;
+        grid-template-columns: repeat(6, 2rem);
+        height: 2rem;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .item {
+        border: solid 1px black;
+        border-radius: 0.3rem;
+        font-size: larger;
+        text-align: center;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: black;
+        color: white;
+        padding: 0.4rem;
+        font-size: 1rem;
+    }
+</style>
+
+<body>
+    <h1>Text to copy: <br> <span name="code">123456</span></h1>
+    <div class="container">
+        <form name="form" >
+        <div class="container-verify">
+            <input class="item" maxlength="6"></input>
+            <input class="item" maxlength="5"></input>
+            <input class="item" maxlength="4"></input>
+            <input class="item" maxlength="3"></input>
+            <input class="item" maxlength="2"></input>
+            <input class="item" maxlength="1"></input>
+
+        </div>
+        <button >Verify</button>
+    </form>
+    </div>
+
+</body>
+
+</html>
