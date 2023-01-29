@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.3</title>
+</head>
+
+<script src="./22.3.js" defer>
+
+
+</script>
+<style>
+
+html{
+    background-color: rgba(60, 176, 176, 0.68);
+}
+    #container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+        padding-top: 4rem;
+    }
+    button{
+        padding: 7px;
+        width: 100px;
+
+    }
+
+    input{
+        border: 0;
+    background-color: rgba(60, 176, 176, 0.68);
+
+    }
+    input:focus{
+        outline: none !important;
+        
+    }
+    
+
+    .letter{
+        border: 0.1rem solid black; 
+        padding: 0.2rem;
+    }
+
+  
+    #playAgain{
+        display: none;
+        font-weight: 600;
+    }
+    #yesBtn{
+        display: none;
+    }
+
+
+</style>
+<body>
+    <div id="container"> 
+        <h1>Welcome To Guess My Letter</h1>
+        <div id="letter" class="letter">?</div>
+        <p id="guessKeyText">Guess a key</p>
+        <p id="playAgain">Would you like to play again?</p>
+        <button id="yesBtn">Yes</button>
+        <p>Keys guessed</p>
+        <input type="text" id="inputGuess" ></input>
+    </div>
+</body>
+
+</html>

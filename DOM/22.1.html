@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.1</title>
+</head>
+
+<script src="./22.1.js" defer>
+
+
+</script>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 7rem;
+    }
+
+    button {
+        padding: 7px;
+        width: 100px;
+        height: 50px;
+        /* font-size: 50px; */
+
+    }
+
+    .confirm-screen {
+        justify-content: center;
+        top: 8.3vw;
+        left: 0;
+        right: 0;
+        width: 36vw;
+        height: 47vh;
+        z-index: 2;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        text-align: center;
+        background-color: #a375a4;
+        opacity: 0.99;
+        border: #764879 solid 0.7rem;
+        border-radius: 1.5rem;
+        display: none;
+        flex-flow:column;
+        row-gap: 1rem;
+        align-items: center;
+    }
+
+.buttons-confirm{
+
+    display: flex;
+        flex-flow: row;
+        column-gap: 1rem;
+}
+</style>
+
+<body>
+    <form id="container" action="#" >
+        <input id="name" type="text" placeholder="name"></input>
+        <input id="age" type="number" placeholder="age"></input>
+        <input id="email" type="text" placeholder="email"></input>
+        <button type="button" id="submitBtn">Submit</button>
+        <div id="confirmBox" class="confirm-screen">
+            <p id="textInfo"></p>
+        <div class="buttons-confirm">
+            <button id="confirm">Confirm</button>
+            <button id="changeInformation">Change Information</button>
+        </div>
+        </div>
+        <p id="msg"></p>
+        </div>
+</body>
+
+</html>

@@ -25,14 +25,7 @@ btn.addEventListener('click', function (event) {
             divImg.appendChild(newImg);
         }
     }
-    // let imgSrc = img.getAttribute("src");
 
-    // if (imgSrc == './img/bulb-on.jpg') {
-    //     img.setAttribute('src', './img/bulb-off.jpg');
-    // } else {
-    //     img.setAttribute('src', './img/bulb-on.jpg');
-
-    // }
 
 
 });
