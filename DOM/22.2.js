@@ -11,4 +11,5 @@ submitBtn.addEventListener("click", function (event) {
   } else {
     divImg.style.cssText = "display: none";
   }
+  console.log(this);
 });

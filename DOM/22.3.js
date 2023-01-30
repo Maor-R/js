@@ -57,14 +57,15 @@ const newGame = () => {
     guessKeyText.innerText = "Guess a key";
     playAgain.style.display = "none";
     yesBtn.style.display = "none";
-    inputGuess.value = '';
+    inputGuess.innerText = '';
     guessKeyText.style.color = "black";
+    gameOver = false;
     //   alert(guessChar);
 
 
 };
-inputGuess.addEventListener("input", function (event) {
-    if (inputGuess.value[inputGuess.value.length - 1] == guessChar) {
+window.addEventListener("keypress", function (event) {
+    if (event.key == guessChar) {
         letter.innerText = guessChar;
         guessKeyText.innerText = "Right letter!";
         guessKeyText.style.color = "green";
@@ -75,7 +76,14 @@ inputGuess.addEventListener("input", function (event) {
         guessKeyText.innerText = "Nope, wrong letter";
         guessKeyText.style.color = "red";
     }
-    inputGuess.value += ",";
+    if(inputGuess.innerText ===''){
+        inputGuess.innerText+=event.key ;
+
+    }
+    else{
+        inputGuess.innerText+= ","+event.key ;
+
+    }
 });
 
 yesBtn.addEventListener("click", function (event) {
