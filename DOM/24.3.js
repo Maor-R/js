@@ -3,74 +3,53 @@
 // Extra
 // 3. Build your own reduce method with the help of prototypes
 
-function reduce(arr, func) {
-    this.arr = arr;
-    this.func = func;
 
-
-};
-reduce.prototype.f = function () {
+Array.prototype.Reduce = function (func) {
 
     let acc = 0;
-    for (let i = 0; i < this.arr.length; i++) {
-        acc += this.func(this.arr[i], i, this.arr);
+    for (let i = 0; i < this.length; i++) {
+        acc += func(this[i], i, this);
     }
     return acc;
 }
 
-const reduceFunc = (num, i, arr) => {
-    return arr[i];
-}
+
 //test
-const testReduce = new reduce([1, 12, 3], reduceFunc);
-testReduce.f();
-console.log(testReduce.f());
+const arrReduce = [1, 12, 3];
+const testReduce = arrReduce.Reduce(e => e);
+console.log(testReduce);
 //--------------------------------
-function find(arr, func) {
-    this.arr = arr;
-    this.func = func;
 
+Array.prototype.Find = function (func) {
 
-};
-find.prototype.g = function () {
-
-    for (let i = 0; i < this.arr.length; i++) {
-        if (this.func(this.arr[i], i, this.arr)) {
-            return this.arr[i];
+    for (let i = 0; i < this.length; i++) {
+        if (func(this[i], i, this)) {
+            return this[i];
         }
     }
 }
 
-const findFunc = (num, i, arr) => {
-    return arr[i] > 10;
-}
+
 //test
-const testFind = new find([1, 12, 3], findFunc);
-testFind.g();
-console.log(testFind.g());
+const arrFind = [1, 12, 3, 8];
+const testFind = arrFind.Find ((e) => e > 10);
+console.log(testFind);
 
 //----------------------------------
-function filter(arr, func) {
-    this.arr = arr;
-    this.func = func;
 
-
-};
-filter.prototype.h = function () {
+Array.prototype.Filter= function (func) {
 
     let retArr = [];
-    for (let i = 0; i < this.arr.length; i++) {
-        if (this.func(this.arr[i], i, this.arr)) {
-            retArr.push(this.arr[i]);
+    for (let i = 0; i < this.length; i++) {
+        if (func(this[i], i, this)) {
+            retArr.push(this[i]);
         }
     }
     return retArr;
 }
 
-const filterFunc = (num, i, arr) => {
-    return arr[i] > 10;
-}
+
 //test
-const testFilter = new filter([1, 12, 3, 8, 15], filterFunc);
-testFilter.h();
-console.log(testFilter.h());
+const arrFilter = [1, 12, 3, 8];
+const testFilter = arrFilter.Filter (e => e > 5);
+console.log(testFilter);
