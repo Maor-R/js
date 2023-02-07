@@ -11,14 +11,12 @@ const url = "https://api.jokes.one/jod";
 // const url = "./joke.xml";
 
 
-const fetchJokeOfDay = () =>{
-    console.log(url)
+async function fetchJokeOfDay(){
 
-    fetch(url).then(res=>res.json()).then((data)=> {
+    await fetch(url).then(res=>res.json()).then((data)=> {
         pTag[0].innerText = data.contents.jokes[0].joke.text;
         title[0].innerText = data.contents.jokes[0].joke.title;
     }).catch(err=> console.log(err));
 }
 
 btn.addEventListener("click", fetchJokeOfDay);
-
