@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30.1_githubApi</title>
+    <title>30.2_movieApi</title>
 </head>
-<script src="./30.1_githubApi.js" defer></script>
+<script src="./30.2_movieAppApi.js" defer></script>
 
 
 <style>
     .container {
         display: grid;
-        grid-template-rows: 4rem 3rem 3rem 16rem;
+        grid-template-rows: 4rem 3rem 3rem 24rem;
         justify-content: center;
         border: solid #5e5ea3 0.1rem;
-        width: 40vw;
+        width: 70vw;
         padding-top: 2rem;
         margin: auto;
         margin-top: 5vh;
@@ -27,7 +27,7 @@
         grid-row-start: 2;
         text-align: center;
         width: 10rem;
-        height: 1.5rem;
+        height: 2rem;
         justify-self: center;
 
     }
@@ -46,16 +46,16 @@
         background-position: center;
         background-size: cover;
         margin: auto;
+
     }
 
-    .profile-user {
+    .profile-movie {
         grid-row-start: 4;
         justify-self: center;
         align-self: center;
         border: solid #5e5ea3 0.1rem;
         padding: 2rem;
         display: none;
-
     }
 
     h1 {
@@ -75,13 +75,12 @@
 
 <body>
 
-    
     <div class="container">
-        <h1>Search Github User</h1>
-        <input id="input" type="text" placeholder="Search user">
+        <h1>Search Movie</h1>
+        <input id="input" type="text" placeholder="Search movie">
         <button id="searchBtn">Search</button>
-        <div id="profileUser" class="profile-user">
-            <div id="imgUser" class="img"></div>
+        <div id="profileMovie" class="profile-movie" >
+            <div id="imgMovie" class="img"></div>
         </div>
 
     </div>
