@@ -53,3 +53,5 @@ Array.prototype.Filter= function (func) {
 const arrFilter = [1, 12, 3, 8];
 const testFilter = arrFilter.Filter (e => e > 5);
 console.log(testFilter);
+
+

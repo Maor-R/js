@@ -1,0 +1,27 @@
+<response>
+<success>
+<total>1</total>
+</success>
+<contents>
+<jokes>
+<description>Joke of the day </description>
+<language>en</language>
+<background/>
+<category>jod</category>
+<date>2023-02-06</date>
+<joke>
+<title>Knock Knock - Opera who?</title>
+<lang>en</lang>
+<length>111</length>
+<clean>1</clean>
+<racial>0</racial>
+<date>2023-02-06</date>
+<id>oFr2gwJ7UpCrRffHKbXksQeF</id>
+<text>
+Knock Knock Who's there? Opera! Opera who? Opera-tunity, and you thought opportunity only knocked once!
+</text>
+</joke>
+</jokes>
+<copyright>2019-20 https://jokes.one</copyright>
+</contents>
+</response>
