@@ -7,7 +7,7 @@
 const hero = {
   health: 5,
   power: 68,
-  getStrength() {
+  getStrength() { 
     if (this.health <= 5) {
       return this.power - 10;
     } else return this.power;
@@ -21,25 +21,6 @@ function whoIsStronger(getStrength) {
     return "I am stronger";
   } else return "You are stronger";
 }
-const ret = whoIsStronger(hero.getStrength.bind(hero));
-
-// function test(){
-//     console.log([].slice.call(arguments))
-
-// }
-// let a = [1,2]
-// console.log(a.slice())
-
-let mammal = function(legs){
-    this.legs = legs;
-
-}
-
-let cat = function(legs, dim){
-    console.log(this)
-    mammal.call( legs);
-    this.dim=dim;
-}
-
-let lion = new cat(4, false)
-console.log(lion)
+const retFunc = hero.getStrength.bind(hero);
+const ret = whoIsStronger(retFunc);
+console.log(ret);

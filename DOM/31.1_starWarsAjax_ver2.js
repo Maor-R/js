@@ -1,21 +1,19 @@
 const starWarsContent = document.getElementById("starWarsContent");
 let arr = [];
 
-async function getStarWarsData(i) {
+function getStarWarsData(i) {
   let obj = {};
 
-  try {
-  const retFetch1 = await fetch(`https://swapi.dev/api/people/${i}/`);
-  const data = await retFetch1.json();
-
+  fetch(`https://swapi.dev/api/people/${i}/`)
+    .then((res) => res.json())
+    .then((data) => {
       console.log(data);
       obj.name = data.name;
       obj.hair = data.hair_color;
       obj.height = data.height;
-
-      const retFetch2 = await fetch(data.homeworld);
-      const dataPlanets = await retFetch2.json();
-
+      fetch(data.homeworld)
+        .then((res) => res.json())
+        .then((dataPlanets) => {
           obj.planetName = dataPlanets.name;
           obj.population = dataPlanets.population;
           arr.push(obj);
@@ -28,11 +26,9 @@ async function getStarWarsData(i) {
             newP.style.gridColumn = colNum++;
             starWarsContent.appendChild(newP);
           }
-      
-        }
-    catch(e) {
-      console.log("Error",e);
-    } 
+        });
+    })
+    .catch((err) => console.log(err));
 }
 
 for (let i = 3; i < 13; i++) {
